@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "HydratEx"
+version = "0.1.0"
+description = "Modular command-line thermodynamic simulator for gas hydrates"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT"}
+
+dependencies = [
+    "typer[all]",
+    "rich",
+    "numpy",
+    "scipy",
+    "numba",
+    "pandas",
+    "pydantic",
+    "PyYAML",
+]
+
+[project.scripts]
+hydratex = "hydratex.interface.cli.main:app"
+
+[project.optional-dependencies]
+docs = [
+    "mkdocs-material",
+    "mkdocstrings",
+    "mkdocstrings-python"
+]
+

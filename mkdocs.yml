@@ -1,0 +1,41 @@
+site_name: HydrateX Documentation
+site_description: Thermodynamic modeling and simulation engine.
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: blue
+  features:
+    - navigation.tabs
+    - content.code.copy
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google  # Explicitly enforces Google style parsing
+            show_root_heading: true
+            show_source: true
+            paths: [.]
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - admonition
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
+  plugins:
+    - search
+    - mkdocstrings:
+        handlers:
+          python:

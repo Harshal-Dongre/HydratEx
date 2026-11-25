@@ -1,0 +1,9 @@
+default_eos: 'pt'
+default_acm: 'uniquac'
+interaction_correlation: 'tee'
+mix_rule: 'lb'
+search_method: 'T'
+display_tolerance: 6f
+composition: methane
+save_files: False
+verbose: False
